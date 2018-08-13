@@ -7,7 +7,7 @@ namespace MarcBlog.API.Data
     {
         private readonly DbContextOptions<DataContext> _options;
         public DataContext(DbContextOptions<DataContext> options) : base (options) {}
-        public DbSet<Value> Values { get; set; }
         public DbSet<BlogPost> BlogPosts { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
