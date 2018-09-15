@@ -50,5 +50,15 @@ namespace MarcBlog.API.Controllers
             await _repo.NewBlogpost(blogpostToCreate);
             return Ok();
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteBlogPost(int id)
+        {
+            var blogPost = await _context.BlogPosts.FirstOrDefaultAsync(v => v.Id == id);
+            _context.Remove(blogPost);
+            _context.SaveChanges();
+            return Ok();
+        }      
+        
     }
 }
