@@ -6,5 +6,6 @@ namespace MarcBlog.API.Data
     public interface IBlogpostRepository
     {
          Task<BlogPost> NewBlogpost(BlogPost newBlogpost);
+         Task<BlogPost> UpdateBlogpost(BlogPost UpdateBlogpost);
     }
 }

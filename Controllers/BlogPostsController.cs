@@ -51,6 +51,26 @@ namespace MarcBlog.API.Controllers
             return Ok();
         }
 
+        [HttpPut]
+        public async Task<IActionResult> UpdateBlogPost([FromBody] BlogpostForNewPostDto blogpostForNewPostDto) 
+        {
+          
+            var blogpostToUpdate = new BlogPost {
+                Id = blogpostForNewPostDto.Id,
+                Title = blogpostForNewPostDto.Title,
+                Description = blogpostForNewPostDto.Description,
+                Body = blogpostForNewPostDto.Body,
+                Category = blogpostForNewPostDto.Category,
+                DateCreated = DateTime.Now,
+                Author = "Marc Mendoza",
+                Active = true
+            };
+
+            await _repo.UpdateBlogpost(blogpostToUpdate);
+            
+            return Ok();
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBlogPost(int id)
         {

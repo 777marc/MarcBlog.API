@@ -19,5 +19,19 @@ namespace MarcBlog.API.Data
             await _context.SaveChangesAsync();
             return newBlogpost;
         }
+        public async Task<BlogPost> UpdateBlogpost(BlogPost UpdateBlogpost)
+        {
+            var blogPost = await _context.BlogPosts.FirstOrDefaultAsync(v => v.Id == UpdateBlogpost.Id);
+
+            blogPost.Title = UpdateBlogpost.Title;
+            blogPost.Description = UpdateBlogpost.Description;
+            blogPost.Category = UpdateBlogpost.Category;
+            blogPost.Body = UpdateBlogpost.Body;
+
+            await _context.SaveChangesAsync();
+            
+            return UpdateBlogpost;
+
+        }
     }
 }
