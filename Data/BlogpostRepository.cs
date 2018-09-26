@@ -31,7 +31,17 @@ namespace MarcBlog.API.Data
             await _context.SaveChangesAsync();
             
             return UpdateBlogpost;
+        }
 
+        public async Task<Boolean> AddLike(int id)
+        {
+            BlogPostLike newLike = new BlogPostLike();
+            newLike.Blogpost_Id = id;
+            newLike.DateCreated = DateTime.Now;
+            newLike.Active = true;
+            await _context.BlogPostLikes.AddAsync(newLike);
+            await _context.SaveChangesAsync();
+            return true;
         }
     }
 }

@@ -79,6 +79,13 @@ namespace MarcBlog.API.Controllers
             _context.SaveChanges();
             return Ok();
         }      
+
+        [HttpPost("{id}")]
+        public async Task<IActionResult> AddLike(int id)
+        {
+            await _repo.AddLike(id);
+            return Ok();
+        }
         
     }
 }
