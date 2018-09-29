@@ -53,7 +53,7 @@ namespace MarcBlog.API.Data
                 _context.SaveChanges();
                 return true;
             }
-            catch(Exception err) {
+            catch(Exception) {
                 return false;
             }
         }
