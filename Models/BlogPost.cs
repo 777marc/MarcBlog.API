@@ -12,5 +12,6 @@ namespace MarcBlog.API.Models
         public string Author { get; set; }
         public DateTime DateCreated { get; set; }
         public bool Active { get; set; }
+        public int Likes { get; set; }
     }
 }

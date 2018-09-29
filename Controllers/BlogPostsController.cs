@@ -14,24 +14,22 @@ namespace MarcBlog.API.Controllers
     public class BlogPostsController : Controller
     {
         private readonly IBlogpostRepository _repo;
-        public DataContext _context { get; }
-        public BlogPostsController(DataContext context, IBlogpostRepository repo)
+        public BlogPostsController(IBlogpostRepository repo)
         {
-            _context = context;
             _repo = repo;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetBlogPosts()
         {
-            var blogPosts = await _context.BlogPosts.ToListAsync();
+            var blogPosts = await _repo.GetAllBlogPosts();
             return Ok(blogPosts);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetBlogPost(int id)
         {
-            var blogPost = await _context.BlogPosts.FirstOrDefaultAsync(v => v.Id == id);
+            var blogPost = await _repo.GetBlogPost(id);
             return Ok(blogPost);
         }        
         
@@ -74,9 +72,7 @@ namespace MarcBlog.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBlogPost(int id)
         {
-            var blogPost = await _context.BlogPosts.FirstOrDefaultAsync(v => v.Id == id);
-            _context.Remove(blogPost);
-            _context.SaveChanges();
+            var result = await _repo.DeleteBlogPost(id);
             return Ok();
         }      
 

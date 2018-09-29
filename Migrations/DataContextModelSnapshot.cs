@@ -38,25 +38,11 @@ namespace MarcBlog.API.Migrations
 
                     b.Property<string>("Title");
 
+                    b.Property<int>("Likes");
+
                     b.HasKey("Id");
 
                     b.ToTable("BlogPosts");
-                });
-
-            modelBuilder.Entity("MarcBlog.API.Models.BlogPostLike", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<bool>("Active");
-
-                    b.Property<int>("Blogpost_Id");
-
-                    b.Property<DateTime>("DateCreated");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BlogPostLikes");
                 });
 
             modelBuilder.Entity("MarcBlog.API.Models.User", b =>
