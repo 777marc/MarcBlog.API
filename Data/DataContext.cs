@@ -9,5 +9,6 @@ namespace MarcBlog.API.Data
         public DataContext(DbContextOptions<DataContext> options) : base (options) {}
         public DbSet<BlogPost> BlogPosts { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ASProject> ASProjects  { get; set; }
     }
 }

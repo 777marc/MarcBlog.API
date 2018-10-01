@@ -34,6 +34,7 @@ namespace MarcBlog.API
             services.AddCors();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IBlogpostRepository, BlogpostRepository>();
+            services.AddScoped<IASProjectsRepository, ASProjectRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters
