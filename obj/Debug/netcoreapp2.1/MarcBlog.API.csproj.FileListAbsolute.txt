@@ -1,0 +1,14 @@
+C:\Users\marc_\source\repos\marc-co\marcblog.api\bin\Debug\netcoreapp2.1\MarcBlog.API.deps.json
+C:\Users\marc_\source\repos\marc-co\marcblog.api\bin\Debug\netcoreapp2.1\MarcBlog.API.runtimeconfig.json
+C:\Users\marc_\source\repos\marc-co\marcblog.api\bin\Debug\netcoreapp2.1\MarcBlog.API.runtimeconfig.dev.json
+C:\Users\marc_\source\repos\marc-co\marcblog.api\bin\Debug\netcoreapp2.1\MarcBlog.API.dll
+C:\Users\marc_\source\repos\marc-co\marcblog.api\bin\Debug\netcoreapp2.1\MarcBlog.API.pdb
+C:\Users\marc_\source\repos\marc-co\marcblog.api\obj\Debug\netcoreapp2.1\MarcBlog.API.csprojAssemblyReference.cache
+C:\Users\marc_\source\repos\marc-co\marcblog.api\obj\Debug\netcoreapp2.1\MarcBlog.API.csproj.CoreCompileInputs.cache
+C:\Users\marc_\source\repos\marc-co\marcblog.api\obj\Debug\netcoreapp2.1\MarcBlog.API.RazorAssemblyInfo.cache
+C:\Users\marc_\source\repos\marc-co\marcblog.api\obj\Debug\netcoreapp2.1\MarcBlog.API.RazorAssemblyInfo.cs
+C:\Users\marc_\source\repos\marc-co\marcblog.api\obj\Debug\netcoreapp2.1\MarcBlog.API.AssemblyInfoInputs.cache
+C:\Users\marc_\source\repos\marc-co\marcblog.api\obj\Debug\netcoreapp2.1\MarcBlog.API.AssemblyInfo.cs
+C:\Users\marc_\source\repos\marc-co\marcblog.api\obj\Debug\netcoreapp2.1\MarcBlog.API.RazorTargetAssemblyInfo.cache
+C:\Users\marc_\source\repos\marc-co\marcblog.api\obj\Debug\netcoreapp2.1\MarcBlog.API.dll
+C:\Users\marc_\source\repos\marc-co\marcblog.api\obj\Debug\netcoreapp2.1\MarcBlog.API.pdb
